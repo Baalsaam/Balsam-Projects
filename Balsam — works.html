@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Balsam Abdulbadei — Data Analyst</title>
+<style>
+:root{--bg:#fffaf3;--surface:#ffffff;--text:#23283a;--muted:#667085;--teal:#0fa3a3;--teal-soft:#d9f3f1;--coral:#ff7a59;--coral-soft:#ffe4dc;--sun:#ffc857;--sun-soft:#fff2cf;--line:#f0e6d8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15191f;--surface:#1e242c;--text:#eef0f3;--muted:#a0a8b3;--teal:#3fc8c4;--teal-soft:#183534;--coral:#ff8e70;--coral-soft:#3d2620;--sun:#ffd070;--sun-soft:#3a3118;--line:#2b323b}}
+:root[data-theme="dark"]{--bg:#15191f;--surface:#1e242c;--text:#eef0f3;--muted:#a0a8b3;--teal:#3fc8c4;--teal-soft:#183534;--coral:#ff8e70;--coral-soft:#3d2620;--sun:#ffd070;--sun-soft:#3a3118;--line:#2b323b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Poppins","Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.65}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+nav b{font-weight:700;font-size:1.05rem}
+nav b i{font-style:normal;color:var(--coral)}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:.92rem;font-weight:500}
+nav a:hover{color:var(--teal)}
+.hero{padding:56px 0 64px;display:grid;grid-template-columns:1.3fr .9fr;gap:36px;align-items:center}
+.tag{display:inline-block;background:var(--sun-soft);color:var(--text);padding:6px 14px;border-radius:99px;font-size:.82rem;font-weight:600}
+h1{font-size:clamp(2.1rem,5.5vw,3.2rem);line-height:1.15;margin:18px 0 16px;font-weight:700;letter-spacing:-.02em}
+h1 span{color:var(--teal);background:linear-gradient(transparent 62%,var(--sun-soft) 62%)}
+.hero p{color:var(--muted);font-size:1.05rem;margin:0 0 26px}
+.btn{display:inline-block;padding:12px 24px;border-radius:12px;text-decoration:none;font-weight:600;font-size:.95rem;margin:0 10px 10px 0}
+.btn.p{background:var(--teal);color:#fff;box-shadow:0 6px 16px rgba(15,163,163,.25)}
+.btn.s{background:var(--coral-soft);color:var(--coral)}
+.stats{display:grid;gap:14px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 22px;display:flex;align-items:center;gap:16px}
+.stat .dot{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem}
+.stat b{display:block;font-size:1.05rem}
+.stat span{color:var(--muted);font-size:.85rem}
+section{padding:50px 0}
+h2{font-size:1.5rem;margin:0 0 6px;font-weight:700}
+.sub{color:var(--muted);margin:0 0 26px;font-size:.95rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card h3{margin:0 0 8px;font-size:1.08rem}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--teal-soft);color:var(--teal);padding:5px 13px;border-radius:99px;font-size:.8rem;font-weight:600}
+.chip.c{background:var(--coral-soft);color:var(--coral)}
+.chip.y{background:var(--sun-soft);color:var(--text)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+.kpi{border-radius:14px;padding:14px;text-align:center}
+.kpi b{display:block;font-size:1.35rem}
+.kpi span{font-size:.76rem;color:var(--muted)}
+.k1{background:var(--teal-soft)}.k1 b{color:var(--teal)}
+.k2{background:var(--coral-soft)}.k2 b{color:var(--coral)}
+.k3{background:var(--sun-soft)}
+.k4{background:var(--teal-soft)}.k4 b{color:var(--teal)}
+.dash{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin:6px 0 22px}
+.panel{border:1px solid var(--line);border-radius:16px;padding:16px;background:var(--bg)}
+.panel h4{margin:0 0 12px;font-size:.82rem;color:var(--muted);font-weight:600}
+.bars{display:flex;align-items:flex-end;gap:6px;height:130px}
+.bars div{flex:1;border-radius:6px 6px 0 0;background:var(--teal)}
+.bars div:nth-child(4n){background:var(--coral)}
+.mo{display:flex;gap:6px;margin-top:6px;font-size:.62rem;color:var(--muted)}
+.mo span{flex:1;text-align:center}
+.reg{margin-bottom:10px;font-size:.8rem}
+.reg i{display:block;height:8px;border-radius:99px;margin-top:4px}
+.note{font-size:.78rem;color:var(--muted);margin:0 0 20px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:22px}
+.step b{display:block;margin-bottom:4px}
+.step p{font-size:.88rem;color:var(--muted);margin:0}
+.step em{font-style:normal;font-weight:700;color:var(--coral);font-size:.8rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.skills h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 12px}
+.edu{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.edu span{color:var(--muted);font-size:.9rem}
+.contact{background:linear-gradient(135deg,var(--teal),#1bb5a5);border-radius:24px;padding:46px 28px;text-align:center;color:#fff;margin-bottom:40px}
+.contact h2{color:#fff}
+.contact p{opacity:.92;margin:6px 0 22px}
+.contact a{display:inline-block;background:#fff;color:#0b7f7f;padding:12px 24px;border-radius:12px;text-decoration:none;font-weight:600;margin:4px 6px}
+.contact a.o{background:transparent;color:#fff;border:2px solid #fff}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding-bottom:50px}
+.dash{display:none}.tabs{display:flex;gap:8px;margin:22px 0 12px;flex-wrap:wrap}.tabs button{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:8px 16px;border-radius:99px;cursor:pointer}.tabs button.on{background:var(--teal);border-color:var(--teal);color:#fff}.frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg)}.fh{background:var(--text);color:var(--bg);padding:10px 16px;font-size:.78rem;font-weight:600;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.fh span{opacity:.7;font-weight:500}.fb{padding:14px}.scr{display:none}.scr.on{display:block}.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.mini div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;font-size:.7rem;color:var(--muted)}.mini b{display:block;font-size:1.05rem;color:var(--text)}.two{display:grid;grid-template-columns:1.6fr 1fr;gap:12px;margin-top:12px}.pn{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}.pn h5{margin:0 0 8px;font-size:.72rem;color:var(--muted);font-weight:600}svg{max-width:100%;height:auto;display:block}.t{fill:var(--teal)}.co{fill:var(--coral)}.su{fill:var(--sun)}.mu{fill:var(--muted);font-size:10px;font-family:inherit}.lt{stroke:var(--teal);fill:none;stroke-width:2.5}.lc{stroke:var(--coral);fill:none;stroke-width:2;stroke-dasharray:4 4}.gl{stroke:var(--line);stroke-width:1}.dn{fill:none;stroke-width:18}.st{stroke:var(--teal)}.sc{stroke:var(--coral)}.ss{stroke:var(--sun)}table.tb{width:100%;border-collapse:collapse;font-size:.74rem}.tb th,.tb td{text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)}.tb th{color:var(--muted);font-weight:600}@media(max-width:700px){.two{grid-template-columns:1fr}.mini{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.hero{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.dash{grid-template-columns:1fr}}
+:root{--pink:#ff5d8f;--pink-soft:#ffe1ea;--violet:#7c5cff;--violet-soft:#e8e2ff;--mint:#2fc08b;--mint-soft:#d8f6e9}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pink:#ff82a8;--pink-soft:#3d2230;--violet:#a28dff;--violet-soft:#29244a;--mint:#5fdcaa;--mint-soft:#173a2d}}
+:root[data-theme="dark"]{--pink:#ff82a8;--pink-soft:#3d2230;--violet:#a28dff;--violet-soft:#29244a;--mint:#5fdcaa;--mint-soft:#173a2d}
+body{overflow-x:hidden}
+.hero{position:relative}
+.hero::before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:var(--pink-soft);right:-70px;top:-10px;z-index:-1;opacity:.8}
+.hero::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--violet-soft);left:-50px;bottom:10px;z-index:-1;opacity:.8}
+h2{display:inline-block;background:linear-gradient(transparent 70%,var(--sun-soft) 70%)}
+.card{transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(124,92,255,.14)}
+#work .card{border-top:5px solid var(--teal)}
+.contact{background:linear-gradient(135deg,var(--teal),var(--violet))}
+.chip.v{background:var(--violet-soft);color:var(--violet)}
+.chip.k{background:var(--pink-soft);color:var(--pink)}
+.chip.m{background:var(--mint-soft);color:var(--mint)}
+.p2{border-top:5px solid var(--violet);background:linear-gradient(180deg,var(--violet-soft) 0,var(--surface) 150px)}
+.k5{background:var(--violet-soft)}.k5 b{color:var(--violet)}
+.k6{background:var(--pink-soft)}.k6 b{color:var(--pink)}
+.k7{background:var(--mint-soft)}.k7 b{color:var(--mint)}
+.k8{background:var(--sun-soft)}
+.p2 .step em{color:var(--violet)}
+.tabs2{display:flex;gap:8px;margin:22px 0 12px;flex-wrap:wrap}
+.tabs2 button{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:8px 16px;border-radius:99px;cursor:pointer}
+.tabs2 button.on{background:var(--violet);border-color:var(--violet);color:#fff}
+.scr2{display:none}.scr2.on{display:block}
+.fv{fill:var(--violet)}.fk{fill:var(--pink)}.fm{fill:var(--mint)}
+.sv{stroke:var(--violet)}.sk{stroke:var(--pink)}.sm{stroke:var(--mint)}
+.lv{stroke:var(--violet);fill:none;stroke-width:2.5}
+.lk{stroke:var(--pink);fill:none;stroke-width:2;stroke-dasharray:4 4}
+.tag2{display:inline-block;background:var(--violet-soft);color:var(--violet);padding:4px 12px;border-radius:99px;font-size:.78rem;font-weight:700;margin-bottom:10px}
+:root{--blue:#3b82f6;--blue-soft:#dbeafe}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--blue:#6ea8ff;--blue-soft:#1b2a45}}
+:root[data-theme="dark"]{--blue:#6ea8ff;--blue-soft:#1b2a45}
+.chip.b{background:var(--blue-soft);color:var(--blue)}
+.p3{border-top:5px solid var(--blue);background:linear-gradient(180deg,var(--blue-soft) 0,var(--surface) 150px)}
+.tag3{display:inline-block;background:var(--blue-soft);color:var(--blue);padding:4px 12px;border-radius:99px;font-size:.78rem;font-weight:700;margin-bottom:10px}
+.k9{background:var(--blue-soft)}.k9 b{color:var(--blue)}
+.p3 .step em{color:var(--blue)}
+.tabs3{display:flex;gap:8px;margin:22px 0 12px;flex-wrap:wrap}
+.tabs3 button{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:8px 16px;border-radius:99px;cursor:pointer}
+.tabs3 button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.scr3{display:none}.scr3.on{display:block}
+.fbl{fill:var(--blue)}.sbl{stroke:var(--blue)}
+.dec{display:grid;gap:10px;margin-top:12px}
+.dec div{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:.85rem}
+.dec b{display:block}
+.dec span.n{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:.8rem}
+.code{background:#1b2230;color:#e6edf7;border-radius:14px;padding:16px 18px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;line-height:1.7;overflow-x:auto;margin:0 0 22px;white-space:pre}
+.code .c{color:#7f8ca3}.code .k{color:#ffc857}.code .s{color:#7fe0b0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Balsam<i>.</i></b><div><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div>
+<span class="tag">👋 Hi, I’m Balsam Abdulbadei</span> <span class="tag" style="background:var(--teal-soft);color:var(--teal)">● Open to work</span>
+<h1>I turn messy data into <span>clear decisions.</span></h1>
+<p>Data Analyst with an MSc in Information Technology. I turn raw data into clear, actionable insights using Power BI, SQL, Python and Advanced Excel to support business decisions.</p>
+<a class="btn p" href="#work">See my projects</a><a class="btn s" href="#contact">Say hello</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="dot" style="background:var(--teal-soft)">📊</div><div><b>Power BI &amp; DAX</b><span>Dashboards and KPIs</span></div></div>
+<div class="stat"><div class="dot" style="background:var(--coral-soft)">🗄️</div><div><b>SQL &amp; Power Query</b><span>Clean, reliable data</span></div></div>
+<div class="stat"><div class="dot" style="background:var(--sun-soft)">🎯</div><div><b>KPIs &amp; storytelling</b><span>Insights people can act on</span></div></div>
+</div>
+</header>
+
+<section id="work">
+<h2>Featured projects ✨</h2>
+<p class="sub">01 · Sales Performance Dashboard</p>
+<div class="card">
+<div class="chips"><span class="chip">Power BI</span><span class="chip c">Power Query</span><span class="chip y">DAX</span><span class="chip">SQL</span><span class="chip c">Star Schema</span></div>
+<p style="margin:16px 0 0">An interactive sales performance dashboard that analyzes revenue, profit, orders, customer performance and regional sales trends, built with Power BI, Power Query, DAX and SQL.</p>
+
+<div class="kpis">
+<div class="kpi k1"><b>$2.4M</b><span>Total sales</span></div>
+<div class="kpi k2"><b>18.6%</b><span>Profit margin</span></div>
+<div class="kpi k3"><b>+12%</b><span>Growth vs last year</span></div>
+<div class="kpi k4"><b>4</b><span>Regions tracked</span></div>
+</div>
+
+<div class="dash">
+<div class="panel"><h4>Monthly sales</h4>
+<div class="bars"><div style="height:42%"></div><div style="height:48%"></div><div style="height:55%"></div><div style="height:50%"></div><div style="height:62%"></div><div style="height:58%"></div><div style="height:70%"></div><div style="height:66%"></div><div style="height:74%"></div><div style="height:82%"></div><div style="height:90%"></div><div style="height:100%"></div></div>
+<div class="mo"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div></div>
+<div class="panel"><h4>Sales by region</h4>
+<div class="reg">North<i style="width:88%;background:var(--teal)"></i></div>
+<div class="reg">East<i style="width:68%;background:var(--coral)"></i></div>
+<div class="reg">South<i style="width:52%;background:var(--sun)"></i></div>
+<div class="reg">West<i style="width:36%;background:var(--teal)"></i></div></div>
+</div>
+<div class="tabs"><button class="on" data-s="s1">Overview</button><button data-s="s2">Products</button><button data-s="s3">Regions &amp; customers</button></div><div class="frame"><div class="fh">Sales Performance Dashboard</div><div class="fb"><div class="scr on" id="s1"><div class="mini"><div><b>$2.4M</b>Total sales</div><div><b>$446K</b>Total profit</div><div><b>18.6%</b>Profit margin</div><div><b>$187</b>Avg order value</div></div><div class="two"><div class="pn"><h5>Monthly sales · this year vs last year</h5><svg viewBox="0 0 400 150"><line class="gl" x1="20" x2="385" y1="30" y2="30"/><line class="gl" x1="20" x2="385" y1="70" y2="70"/><line class="gl" x1="20" x2="385" y1="110" y2="110"/><polyline class="lc" points="20,114 53,110 86,106 118,108 151,100 184,102 216,94 249,96 282,88 314,82 347,76 380,68"/><polyline class="lt" points="20,110 53,104 86,98 118,102 151,90 184,94 216,82 249,86 282,74 314,62 347,52 380,40"/><text class="mu" x="20" y="144">Jan</text><text class="mu" x="118" y="144">Apr</text><text class="mu" x="216" y="144">Jul</text><text class="mu" x="314" y="144">Oct</text><text class="mu" x="380" y="144" text-anchor="end">Dec</text></svg></div><div class="pn"><h5>Sales by category</h5><svg viewBox="0 0 200 120"><g transform="rotate(-90 60 60)"><circle class="dn st" cx="60" cy="60" r="40" stroke-dasharray="113 251"/><circle class="dn sc" cx="60" cy="60" r="40" stroke-dasharray="83 251" stroke-dashoffset="-113"/><circle class="dn ss" cx="60" cy="60" r="40" stroke-dasharray="55 251" stroke-dashoffset="-196"/></g><rect class="t" x="120" y="30" width="10" height="10" rx="2"/><text class="mu" x="136" y="39">Technology 45%</text><rect class="co" x="120" y="55" width="10" height="10" rx="2"/><text class="mu" x="136" y="64">Furniture 33%</text><rect class="su" x="120" y="80" width="10" height="10" rx="2"/><text class="mu" x="136" y="89">Supplies 22%</text></svg></div></div></div><div class="scr" id="s2"><div class="mini"><div><b>Laptops</b>Top product</div><div><b>5,240</b>Orders</div><div><b>42</b>Products</div><div><b>$187</b>Avg order value</div></div><div class="two"><div class="pn"><h5>Top products by sales</h5><svg viewBox="0 0 400 170"><text class="mu" x="0" y="20">Laptops</text><rect class="t" x="80" y="8" width="240" height="16" rx="4"/><text class="mu" x="326" y="20">$412K</text><text class="mu" x="0" y="48">Phones</text><rect class="t" x="80" y="36" width="205" height="16" rx="4"/><text class="mu" x="291" y="48">$351K</text><text class="mu" x="0" y="76">Chairs</text><rect class="co" x="80" y="64" width="165" height="16" rx="4"/><text class="mu" x="251" y="76">$283K</text><text class="mu" x="0" y="104">Tables</text><rect class="co" x="80" y="92" width="130" height="16" rx="4"/><text class="mu" x="216" y="104">$222K</text><text class="mu" x="0" y="132">Binders</text><rect class="su" x="80" y="120" width="95" height="16" rx="4"/><text class="mu" x="181" y="132">$163K</text><text class="mu" x="0" y="160">Paper</text><rect class="su" x="80" y="148" width="70" height="16" rx="4"/><text class="mu" x="156" y="160">$120K</text></svg></div><div class="pn"><h5>Profit margin by category</h5><div class="reg">Technology · 22%<i style="width:88%;background:var(--teal)"></i></div><div class="reg">Supplies · 19%<i style="width:76%;background:var(--sun)"></i></div><div class="reg">Furniture · 14%<i style="width:56%;background:var(--coral)"></i></div></div></div></div><div class="scr" id="s3"><div class="mini"><div><b>North</b>Top region</div><div><b>+12%</b>YoY growth</div><div><b>1,284</b>Customers</div><div><b>4</b>Regions</div></div><div class="two"><div class="pn"><h5>Sales by region</h5><svg viewBox="0 0 300 150"><rect class="t" x="30" y="30" width="40" height="100" rx="5"/><rect class="co" x="100" y="52" width="40" height="78" rx="5"/><rect class="su" x="170" y="72" width="40" height="58" rx="5"/><rect class="t" x="240" y="90" width="40" height="40" rx="5"/><text class="mu" x="50" y="146" text-anchor="middle">North</text><text class="mu" x="120" y="146" text-anchor="middle">East</text><text class="mu" x="190" y="146" text-anchor="middle">South</text><text class="mu" x="260" y="146" text-anchor="middle">West</text></svg></div><div class="pn"><h5>Top customers</h5><table class="tb"><tr><th>Customer</th><th>Sales</th><th>Margin</th></tr><tr><td>Customer A</td><td>$48K</td><td>21%</td></tr><tr><td>Customer B</td><td>$41K</td><td>18%</td></tr><tr><td>Customer C</td><td>$37K</td><td>20%</td></tr><tr><td>Customer D</td><td>$33K</td><td>16%</td></tr></table></div></div></div></div></div>
+
+<div class="steps">
+<div class="step"><em>01 · CLEAN</em><b>Power Query</b><p>Data type handling, duplicate removal, merging, appending, grouping and pivot/unpivot.</p></div>
+<div class="step"><em>02 · MODEL</em><b>Star schema</b><p>Fact and dimension tables with the right relationships for efficient analysis.</p></div>
+<div class="step"><em>03 · MEASURE</em><b>DAX KPIs</b><p>Total Sales, Total Profit, Profit Margin, Average Order Value, YTD Sales, YoY Growth and more.</p></div>
+<div class="step"><em>04 · VISUALIZE</em><b>Interactive visuals</b><p>Slicers, drill-through, tooltips, KPI cards and trend analysis for data-driven decisions.</p></div>
+</div>
+</div>
+</section>
+
+<section id="work2">
+<h2>Featured projects ✨</h2>
+<p class="sub">02 · Clinic Patient Flow &amp; Appointments Dashboard</p>
+<div class="card p2">
+<span class="tag2">🏥 Healthcare analytics</span>
+<div class="chips"><span class="chip v">Power BI</span><span class="chip k">DAX</span><span class="chip m">SQL</span><span class="chip y">Excel</span><span class="chip">Power Query</span></div>
+<p style="margin:16px 0 0">An interactive dashboard for a multi-department clinic that tracks patient visits, appointment no-shows, waiting times and patient satisfaction, so managers can plan staffing and cut delays.</p>
+
+<div class="kpis">
+<div class="kpi k5"><b>12.4K</b><span>Patient visits</span></div>
+<div class="kpi k6"><b>8.7%</b><span>No-show rate</span></div>
+<div class="kpi k7"><b>24 min</b><span>Avg waiting time</span></div>
+<div class="kpi k8"><b>4.6 / 5</b><span>Patient satisfaction</span></div>
+</div>
+
+<div class="tabs2"><button class="on" data-t="p1">Overview</button><button data-t="p2">Departments</button><button data-t="p3">Appointments</button></div>
+<div class="frame"><div class="fh">Clinic Patient Flow Dashboard</div><div class="fb">
+
+<div class="scr2 on" id="p1"><div class="mini"><div><b>12.4K</b>Total visits</div><div><b>3,180</b>New patients</div><div><b>24 min</b>Avg wait</div><div><b>4.6</b>Satisfaction</div></div>
+<div class="two"><div class="pn"><h5>Daily visits · this month vs last month</h5><svg viewBox="0 0 400 150"><line class="gl" x1="20" x2="385" y1="30" y2="30"/><line class="gl" x1="20" x2="385" y1="70" y2="70"/><line class="gl" x1="20" x2="385" y1="110" y2="110"/><polyline class="lk" points="20,112 62,108 104,110 146,98 188,96 230,94 272,86 314,80 356,74 380,68"/><polyline class="lv" points="20,104 62,96 104,100 146,84 188,78 230,82 272,64 314,58 356,50 380,42"/><text class="mu" x="20" y="144">Day 1</text><text class="mu" x="200" y="144" text-anchor="middle">Day 15</text><text class="mu" x="380" y="144" text-anchor="end">Day 30</text></svg></div>
+<div class="pn"><h5>Visits by department</h5><svg viewBox="0 0 200 120"><g transform="rotate(-90 60 60)"><circle class="dn sv" cx="60" cy="60" r="40" stroke-dasharray="95.5 251"/><circle class="dn sk" cx="60" cy="60" r="40" stroke-dasharray="67.8 251" stroke-dashoffset="-95.5"/><circle class="dn sm" cx="60" cy="60" r="40" stroke-dasharray="50.3 251" stroke-dashoffset="-163.3"/><circle class="dn ss" cx="60" cy="60" r="40" stroke-dasharray="37.7 251" stroke-dashoffset="-213.6"/></g><rect class="fv" x="120" y="20" width="10" height="10" rx="2"/><text class="mu" x="136" y="29">General 38%</text><rect class="fk" x="120" y="43" width="10" height="10" rx="2"/><text class="mu" x="136" y="52">Pediatrics 27%</text><rect class="fm" x="120" y="66" width="10" height="10" rx="2"/><text class="mu" x="136" y="75">Dental 20%</text><rect class="su" x="120" y="89" width="10" height="10" rx="2"/><text class="mu" x="136" y="98">Cardiology 15%</text></svg></div></div></div>
+
+<div class="scr2" id="p2"><div class="mini"><div><b>General</b>Busiest dept.</div><div><b>4</b>Departments</div><div><b>18</b>Doctors</div><div><b>82%</b>Room usage</div></div>
+<div class="two"><div class="pn"><h5>Average waiting time by department (min)</h5><svg viewBox="0 0 400 130"><text class="mu" x="0" y="20">General</text><rect class="fv" x="80" y="8" width="240" height="16" rx="4"/><text class="mu" x="326" y="20">31</text><text class="mu" x="0" y="52">Pediatrics</text><rect class="fk" x="80" y="40" width="201" height="16" rx="4"/><text class="mu" x="287" y="52">26</text><text class="mu" x="0" y="84">Cardiology</text><rect class="su" x="80" y="72" width="163" height="16" rx="4"/><text class="mu" x="249" y="84">21</text><text class="mu" x="0" y="116">Dental</text><rect class="fm" x="80" y="104" width="139" height="16" rx="4"/><text class="mu" x="225" y="116">18</text></svg></div>
+<div class="pn"><h5>Patient satisfaction (out of 5)</h5><div class="reg">Dental · 4.8<i style="width:96%;background:var(--mint)"></i></div><div class="reg">Pediatrics · 4.7<i style="width:94%;background:var(--pink)"></i></div><div class="reg">Cardiology · 4.5<i style="width:90%;background:var(--sun)"></i></div><div class="reg">General · 4.4<i style="width:88%;background:var(--violet)"></i></div></div></div></div>
+
+<div class="scr2" id="p3"><div class="mini"><div><b>15.1K</b>Booked</div><div><b>13.8K</b>Attended</div><div><b>8.7%</b>No-show rate</div><div><b>−2.1 pts</b>After SMS reminders</div></div>
+<div class="two"><div class="pn"><h5>Appointments by weekday</h5><svg viewBox="0 0 300 150"><rect class="fv" x="20" y="50" width="36" height="80" rx="5"/><rect class="fk" x="76" y="30" width="36" height="100" rx="5"/><rect class="fm" x="132" y="54" width="36" height="76" rx="5"/><rect class="su" x="188" y="68" width="36" height="62" rx="5"/><rect class="fv" x="244" y="80" width="36" height="50" rx="5"/><text class="mu" x="38" y="146" text-anchor="middle">Sun</text><text class="mu" x="94" y="146" text-anchor="middle">Mon</text><text class="mu" x="150" y="146" text-anchor="middle">Tue</text><text class="mu" x="206" y="146" text-anchor="middle">Wed</text><text class="mu" x="262" y="146" text-anchor="middle">Thu</text></svg></div>
+<div class="pn"><h5>Busiest time slots</h5><table class="tb"><tr><th>Slot</th><th>Visits</th><th>Wait</th></tr><tr><td>9–10 AM</td><td>186</td><td>34 min</td></tr><tr><td>11–12 AM</td><td>164</td><td>28 min</td></tr><tr><td>2–3 PM</td><td>121</td><td>19 min</td></tr><tr><td>5–6 PM</td><td>97</td><td>15 min</td></tr></table></div></div></div>
+
+</div></div>
+<p class="note" style="margin-top:12px">🔒 Built on a fully anonymised sample dataset. No real patient data is used.</p>
+
+<div class="steps">
+<div class="step"><em>01 · CLEAN</em><b>Power Query</b><p>Standardising patient, doctor and appointment records, fixing dates and times, handling missing values.</p></div>
+<div class="step"><em>02 · MODEL</em><b>Star schema</b><p>A visits fact table linked to patient, doctor, department and date dimensions.</p></div>
+<div class="step"><em>03 · MEASURE</em><b>DAX KPIs</b><p>No-Show Rate, Avg Waiting Time, Visits per Doctor, Room Utilisation, MoM Growth.</p></div>
+<div class="step"><em>04 · VISUALIZE</em><b>Interactive visuals</b><p>Slicers by department, doctor and month, with drill-through to daily detail.</p></div>
+</div>
+</div>
+</section>
+
+<section id="work3">
+<h2>Featured projects ✨</h2>
+<p class="sub">03 · Student Survey Analysis: Where Should the University Invest?</p>
+<div class="card p3">
+<span class="tag3">🐍 Python · Survey analysis</span>
+<div class="chips"><span class="chip b">Python</span><span class="chip k">Pandas</span><span class="chip m">NumPy</span><span class="chip y">Matplotlib</span><span class="chip v">SciPy</span><span class="chip c">Jupyter</span><span class="chip">Google Forms</span></div>
+<p style="margin:16px 0 0">A complete data project: I designed a short questionnaire, collected responses from university students across six faculties, cleaned and analysed the data in Python, and turned the results into a clear, evidence-based recommendation on where to spend the next campus improvement budget.</p>
+
+<div class="kpis">
+<div class="kpi k9"><b>412</b><span>Student responses</span></div>
+<div class="kpi k6"><b>6</b><span>Faculties covered</span></div>
+<div class="kpi k7"><b>94%</b><span>Valid after cleaning</span></div>
+<div class="kpi k8"><b>38%</b><span>Top priority: library hours</span></div>
+</div>
+
+<div class="tabs3"><button class="on" data-u="q1">Overview</button><button data-u="q2">Findings</button><button data-u="q3">Decision</button></div>
+<div class="frame"><div class="fh">Student Survey · Jupyter Notebook output</div><div class="fb">
+
+<div class="scr3 on" id="q1"><div class="mini"><div><b>412</b>Responses</div><div><b>6</b>Faculties</div><div><b>94%</b>Valid records</div><div><b>3 weeks</b>Collection period</div></div>
+<div class="two"><div class="pn"><h5>Top priority for the budget (% of students)</h5><svg viewBox="0 0 400 130"><text class="mu" x="0" y="20">Library hours</text><rect class="fbl" x="90" y="8" width="230" height="16" rx="4"/><text class="mu" x="326" y="20">38%</text><text class="mu" x="0" y="52">Wi-Fi</text><rect class="fk" x="90" y="40" width="176" height="16" rx="4"/><text class="mu" x="272" y="52">29%</text><text class="mu" x="0" y="84">Study spaces</text><rect class="fm" x="90" y="72" width="127" height="16" rx="4"/><text class="mu" x="223" y="84">21%</text><text class="mu" x="0" y="116">Cafeteria</text><rect class="su" x="90" y="104" width="73" height="16" rx="4"/><text class="mu" x="169" y="116">12%</text></svg></div>
+<div class="pn"><h5>Responses by study year</h5><svg viewBox="0 0 200 120"><g transform="rotate(-90 60 60)"><circle class="dn sbl" cx="60" cy="60" r="40" stroke-dasharray="75.4 251"/><circle class="dn sk" cx="60" cy="60" r="40" stroke-dasharray="70.4 251" stroke-dashoffset="-75.4"/><circle class="dn sm" cx="60" cy="60" r="40" stroke-dasharray="60.3 251" stroke-dashoffset="-145.8"/><circle class="dn ss" cx="60" cy="60" r="40" stroke-dasharray="45.2 251" stroke-dashoffset="-206.1"/></g><rect class="fbl" x="120" y="20" width="10" height="10" rx="2"/><text class="mu" x="136" y="29">Year 1 · 30%</text><rect class="fk" x="120" y="43" width="10" height="10" rx="2"/><text class="mu" x="136" y="52">Year 2 · 28%</text><rect class="fm" x="120" y="66" width="10" height="10" rx="2"/><text class="mu" x="136" y="75">Year 3 · 24%</text><rect class="su" x="120" y="89" width="10" height="10" rx="2"/><text class="mu" x="136" y="98">Year 4 · 18%</text></svg></div></div></div>
+
+<div class="scr3" id="q2"><div class="mini"><div><b>Library hours</b>Top choice</div><div><b>4.3 / 5</b>Avg importance</div><div><b>2.4 / 5</b>Current library rating</div><div><b>p &lt; 0.05</b>Faculty difference</div></div>
+<div class="two"><div class="pn"><h5>Satisfaction with current service (1–5)</h5><svg viewBox="0 0 400 130"><text class="mu" x="0" y="20">Library hours</text><rect class="fk" x="90" y="8" width="165" height="16" rx="4"/><text class="mu" x="261" y="20">2.4</text><text class="mu" x="0" y="52">Wi-Fi</text><rect class="fk" x="90" y="40" width="178" height="16" rx="4"/><text class="mu" x="274" y="52">2.6</text><text class="mu" x="0" y="84">Study spaces</text><rect class="fbl" x="90" y="72" width="213" height="16" rx="4"/><text class="mu" x="309" y="84">3.1</text><text class="mu" x="0" y="116">Cafeteria</text><rect class="fm" x="90" y="104" width="240" height="16" rx="4"/><text class="mu" x="336" y="116">3.5</text></svg></div>
+<div class="pn"><h5>Top priority by faculty</h5><table class="tb"><tr><th>Faculty</th><th>Top choice</th><th>Share</th></tr><tr><td>Medicine</td><td>Library hours</td><td>52%</td></tr><tr><td>Engineering</td><td>Wi-Fi</td><td>41%</td></tr><tr><td>Arts</td><td>Library hours</td><td>39%</td></tr><tr><td>Business</td><td>Study spaces</td><td>34%</td></tr></table></div></div></div>
+
+<div class="scr3" id="q3"><div class="mini"><div><b>3</b>Recommendations</div><div><b>2</b>Quick wins</div><div><b>1</b>Follow-up survey</div><div><b>Evidence</b>Based</div></div>
+<div class="dec">
+<div><span class="n" style="background:var(--blue)">1</span><p style="margin:0"><b>Extend library opening hours</b>Highest priority (38%) and the lowest satisfaction score (2.4 / 5), strongest in Medicine and Arts.</p></div>
+<div><span class="n" style="background:var(--pink)">2</span><p style="margin:0"><b>Upgrade Wi-Fi in the lowest-rated buildings</b>Second priority (29%), led by Engineering students.</p></div>
+<div><span class="n" style="background:var(--mint)">3</span><p style="margin:0"><b>Run a short follow-up survey next semester</b>To measure whether satisfaction improved after the changes.</p></div>
+</div></div>
+
+</div></div>
+<p class="note" style="margin-top:12px">📝 Sample survey dataset created for portfolio demonstration. Responses are anonymous.</p>
+
+<pre class="code"><span class="c"># Clean the survey and compare priorities across faculties</span>
+<span class="k">import</span> pandas <span class="k">as</span> pd
+from scipy.stats import chi2_contingency
+
+df = pd.read_csv(<span class="s">"student_survey.csv"</span>)
+df = df.drop_duplicates(<span class="s">"response_id"</span>).dropna(subset=[<span class="s">"priority"</span>])
+df[<span class="s">"faculty"</span>] = df[<span class="s">"faculty"</span>].str.strip().str.title()
+
+table = pd.crosstab(df[<span class="s">"faculty"</span>], df[<span class="s">"priority"</span>])
+chi2, p, dof, exp = chi2_contingency(table)
+print(table.div(table.sum(axis=1), axis=0).round(2), p)</pre>
+
+<div class="steps">
+<div class="step"><em>01 · COLLECT</em><b>Survey design</b><p>A short Google Form with clear, unbiased questions, shared with students across six faculties.</p></div>
+<div class="step"><em>02 · CLEAN</em><b>Pandas</b><p>Removing duplicates, fixing inconsistent labels and handling unanswered questions.</p></div>
+<div class="step"><em>03 · ANALYSE</em><b>Pandas &amp; SciPy</b><p>Cross-tabs, averages and chi-square tests to see whether priorities differ by faculty.</p></div>
+<div class="step"><em>04 · DECIDE</em><b>Recommendation</b><p>Turning the findings into a ranked, evidence-backed decision that management can act on.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>What I can do for your team</h2>
+<p class="sub">From raw tables to decisions.</p>
+<div class="grid">
+<div class="card"><div class="ico" style="background:var(--teal-soft)">🧹</div><h3>Data cleaning</h3><p>Fixing duplicates, formats and missing values so the numbers can be trusted.</p></div>
+<div class="card"><div class="ico" style="background:var(--coral-soft)">🧱</div><h3>Data modelling</h3><p>Star-schema models that keep reports fast, consistent and easy to maintain.</p></div>
+<div class="card"><div class="ico" style="background:var(--sun-soft)">📈</div><h3>Dashboards &amp; KPIs</h3><p>Interactive reports with clear KPIs that non-technical people can read at a glance.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<p class="sub">Tools I work with.</p>
+<div class="skills">
+<div><h3>Tools</h3><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Excel (Advanced)</span><span class="chip">Google Sheets</span></div></div>
+<div><h3>Core skills</h3><div class="chips"><span class="chip c">Data Cleaning</span><span class="chip c">Data Transformation</span><span class="chip c">Data Modeling</span><span class="chip c">Statistical Analysis</span></div></div>
+<div><h3>Delivery</h3><div class="chips"><span class="chip y">Dashboards</span><span class="chip y">Reporting</span><span class="chip y">KPI Design</span></div></div>
+<div><h3>Languages</h3><div class="chips"><span class="chip y">Arabic · Native</span><span class="chip y">English · Professional</span></div></div>
+</div>
+</section>
+
+<section>
+<h2>Education</h2>
+<p class="sub">&nbsp;</p>
+<div class="card">
+<div class="edu"><b>MSc in Information Technology — Lovely Professional University</b><span>2025 · First Division</span></div>
+<div class="edu" style="margin-top:16px"><b>BSc in Information Technology — Karary University</b><span>2022 · Second Honours</span></div>
+</div>
+</section>
+
+<section id="contact" style="padding-bottom:0">
+<div class="contact">
+<h2>Let’s work together</h2>
+<p>Open to data analyst opportunities. I would love to hear from you.</p>
+<a href="mailto:balsam1999@gmail.com">balsam1999@gmail.com</a><a class="o" href="https://linkedin.com/in/balsam-abdulbadei-4a433b252">LinkedIn</a>
+</div>
+</section>
+<footer>© Balsam Abdulbadei</footer><script>document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on')});document.querySelectorAll('.scr').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById(b.dataset.s).classList.add('on')})})</script>
+<script>document.querySelectorAll('.tabs2 button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tabs2 button').forEach(function(x){x.classList.remove('on')});document.querySelectorAll('.scr2').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')})})</script>
+<script>document.querySelectorAll('.tabs3 button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tabs3 button').forEach(function(x){x.classList.remove('on')});document.querySelectorAll('.scr3').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById(b.dataset.u).classList.add('on')})})</script>
+</div>
+</body>
+</html>
